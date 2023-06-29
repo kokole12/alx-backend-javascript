@@ -12,6 +12,14 @@ export default class Currency {
     this._code = val;
   }
 
+  get name() {
+    return this._name;
+  }
+
+  set name(val) {
+    this._name = val;
+  }
+
   displayFullCurrency() {
     return `${this._name} (${this._code})`;
   }
