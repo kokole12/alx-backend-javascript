@@ -1,9 +1,11 @@
-/* eslint-disable consistent-return */
-export default function hasValuesFromArray(set, array) {
-  for (const item of array) {
-    if (!set.has(item)) {
-      return false;
+/* eslint-disable array-callback-return */
+export default function hasValuesFromArray(set, list) {
+  let val = true;
+  list.map((x) => {
+    if (!set.has(x)) {
+      val = false;
     }
-    return true;
-  }
+  });
+
+  return val;
 }
