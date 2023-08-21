@@ -1,6 +1,8 @@
 #!/usr/bin/node
 
-function displayMessage(message) {
+/* eslint-env es6 */
+
+const displayMessage = (message) => {
     process.stdout.write(message)
 }
 
