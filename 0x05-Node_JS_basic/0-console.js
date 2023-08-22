@@ -2,7 +2,7 @@
 
 /* eslint-env es6 */
 
-function (message) {
+function displayMessage(message) {
     process.stdout.write(message)
 }
 
