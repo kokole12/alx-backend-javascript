@@ -1,5 +1,3 @@
-/*eslint-env es6*/
-
 const fs = require('fs');
 
 function countStudents(path) {
