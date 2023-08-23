@@ -5,11 +5,12 @@ const assert = require('chai').assert;
 
 
 describe('sendPaymentRequestApi', function() {
-    it('check if utils is called', function() {
+    it('check utils stubbed', function() {
         const stub = sinon.stub(Utils, "calculateNumber")
+        const spy = sinon.spy(console, 'log');
         stub.returns(10);
         const result = Utils.calculateNumber('SUM', 100, 20);
-        assert.strictEqual(result, 10)
+        assert.equal(result, 10);
         stub.restore();
     });
 });
