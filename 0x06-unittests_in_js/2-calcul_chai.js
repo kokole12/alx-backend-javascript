@@ -14,7 +14,7 @@ function calculateNumber(type, a, b) {
         if (val2 === 0) {
             return 'Error';
         }
-        return Math.round(val1 / val2);
+        return (val1 / val2);
     }
 }
 
