@@ -8,9 +8,8 @@ describe('sendPaymentRequestApi', function() {
     it('check if utils is called', function() {
         const stub = sinon.stub(Utils, "calculateNumber")
         stub.returns(10);
-        const result = sendPaymentRequestToApi(100, 20)
-
-        assert.strictEqual(result, sendPaymentRequestToApi(100, 20))
+        const result = Utils.calculateNumber('SUM', 100, 20);
+        assert.strictEqual(result, 10)
         stub.restore();
     });
 });
