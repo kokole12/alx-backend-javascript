@@ -179,7 +179,7 @@ describe('Integration Testing', () => {
         url: 'http://localhost:7865/login',
         method: 'POST',
         json: {
-          userName: 'Betty',
+          username: 'Betty',
         },
       };
 
