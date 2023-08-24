@@ -1,19 +1,18 @@
-const chai = require('chai');
-const request = require('request');
-const app = require('./app'); // Path to your app.js file
+const express = require('express');
 
-chai.use(chaiHttp);
-const expect = chai.expect;
+const port = 7865;
 
-describe('Express App', () => {
-    it('should return status code 200 and welcome message', (done) => {
-        request(app)
-            .get('/')
-            .end((err, res) => {
-                expect(err).to.be.null;
-                expect(res).to.have.status(200);
-                expect(res.text).to.equal('Welcome to the payment system');
-                done();
-            });
-    });
+const app = express();
+
+
+app.get('/', (req, res) => {
+    res.statusCode = 200;
+    res.send('Welcome to the payment system');
 });
+
+app.listen(port, () => {
+    console.log('API available on localhost port 7865');
+});
+
+
+module.exports = app;
