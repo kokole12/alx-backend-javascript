@@ -1,4 +1,4 @@
-function calculateNumber(a, b) {
+function calculateNumber(a, b=0) {
     const val1 = Number(a);
     const val2 = Number(b);
 
